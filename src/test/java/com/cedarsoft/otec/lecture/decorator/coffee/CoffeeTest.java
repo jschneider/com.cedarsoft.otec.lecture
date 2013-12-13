@@ -11,10 +11,10 @@ public class CoffeeTest {
     Coffee coffee = new SimpleCoffee();
     System.out.println( "Cost: " + coffee.getCost() + "; Ingredients: " + coffee.getIngredients() );
 
-    coffee = new Milk( coffee );
+    coffee = new Sprinkles( coffee );
     System.out.println( "Cost: " + coffee.getCost() + "; Ingredients: " + coffee.getIngredients() );
 
-    coffee = new Sprinkles( coffee );
+    coffee = new Milk( coffee );
     System.out.println( "Cost: " + coffee.getCost() + "; Ingredients: " + coffee.getIngredients() );
 
     coffee = new Whip( coffee );

@@ -28,17 +28,17 @@ package com.cedarsoft.otec.lecture.decorator;
 public class SalesTaxDecorator implements Article {
   private final Article article;
 
-  private final double salesTax;
+  private final double salesTaxPercentage;
 
-  public SalesTaxDecorator( Article article, double salesTax ) {
+  public SalesTaxDecorator( Article article, double salesTaxPercentage ) {
     this.article = article;
-    this.salesTax = salesTax;
+    this.salesTaxPercentage = salesTaxPercentage;
   }
 
   @Override
   public Money getPrice() {
     Money price = article.getPrice();
-    return new Money( ( int ) ( price.getCents() * ( 1 + salesTax ) ), price.getCurrency() );
+    return new Money( ( int ) ( price.getCents() * ( 1 + salesTaxPercentage ) ), price.getCurrency() );
   }
 
   @Override
