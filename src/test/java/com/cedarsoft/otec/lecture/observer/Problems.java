@@ -15,7 +15,7 @@ public class Problems {
     inbox = new InboxObservable();
   }
 
-  @Test( expected = StackOverflowError.class )
+  @Test(expected = StackOverflowError.class)
   public void testEndless() throws Exception {
     InboxObservable.Listener copyListener = new InboxObservable.Listener() {
       @Override
@@ -33,13 +33,13 @@ public class Problems {
     inbox.receive( new Mail( "from", "to", "subject" ) );
   }
 
-  @Test( expected = ConcurrentModificationException.class )
+  @Test(expected = ConcurrentModificationException.class)
   public void testConCurrentProblem() throws Exception {
     InboxObservable.Listener waitForFirstMail = new InboxObservable.Listener() {
       @Override
       public void mailReceived( InboxObservable inbox, Mail mail ) {
         System.out.println( "First mail received: " + mail );
-        System.out.println( "now going to register myself..." );
+        System.out.println( "now going to unregister myself..." );
 
         inbox.removeListener( this );
       }
