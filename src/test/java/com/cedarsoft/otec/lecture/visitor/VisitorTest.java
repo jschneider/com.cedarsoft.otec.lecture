@@ -81,8 +81,8 @@ public class VisitorTest {
   public void testIt() {
     SimpleVisitor visitor = new SimpleVisitor();
 
-    compositeOperand.visit( visitor );
-    new NumericOperand( 2 ).visit( visitor );
-    new SumOperand( new NumericOperand( 17 ), new NumericOperand( 3 ), new NumericOperand( 12 ) ).visit( visitor );
+    compositeOperand.accept(visitor);
+    new NumericOperand( 2 ).accept(visitor);
+    new SumOperand( new NumericOperand( 17 ), new NumericOperand( 3 ), new NumericOperand( 12 ) ).accept(visitor);
   }
 }

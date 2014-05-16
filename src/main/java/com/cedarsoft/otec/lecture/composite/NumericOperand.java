@@ -52,7 +52,7 @@ public class NumericOperand implements ArithmeticExpression {
   }
 
   @Override
-  public void visit( ArithmeticExpressionVisitor visitor ) {
+  public void accept(ArithmeticExpressionVisitor visitor) {
     visitor.visitNumericOperand( this );
   }
 }

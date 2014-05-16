@@ -63,7 +63,7 @@ public class CompositeOperand implements ArithmeticExpression {
   }
 
   @Override
-  public void visit( ArithmeticExpressionVisitor visitor ) {
+  public void accept(ArithmeticExpressionVisitor visitor) {
     visitor.visitCompositeOperand( this );
   }
 }

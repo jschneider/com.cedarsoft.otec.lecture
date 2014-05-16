@@ -41,5 +41,5 @@ public interface ArithmeticExpression {
    *
    * @param visitor the visitor
    */
-  void visit( ArithmeticExpressionVisitor visitor );
+  void accept(ArithmeticExpressionVisitor visitor);
 }
