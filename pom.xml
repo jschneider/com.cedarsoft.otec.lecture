@@ -10,7 +10,7 @@
   </parent>
 
   <artifactId>otec</artifactId>
-  <version>2013-01-SNAPSHOT</version>
+  <version>02-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>Objekt-Technologien</name>
   <description>Projekt für Objekt-Technologient</description>
