@@ -3,10 +3,10 @@ package com.cedarsoft.otec.lecture.decorator.coffee;
 /**
  * @author Johannes Schneider (<a href="mailto:js@cedarsoft.com">js@cedarsoft.com</a>)
  */
-public class Sprinkles implements Coffee {
+public class SprinklesDecorator implements Coffee {
   protected final Coffee decoratedCoffee;
 
-  public Sprinkles( Coffee decoratedCoffee ) {
+  public SprinklesDecorator(Coffee decoratedCoffee ) {
     this.decoratedCoffee = decoratedCoffee;
   }
 

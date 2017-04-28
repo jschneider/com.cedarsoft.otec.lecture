@@ -11,17 +11,17 @@ public class CoffeeTest {
     Coffee coffee = new SimpleCoffee();
     System.out.println( "Cost: " + coffee.getCost() + "; Ingredients: " + coffee.getIngredients() );
 
-    coffee = new Sprinkles( coffee );
+    coffee = new SprinklesDecorator( coffee );
     System.out.println( "Cost: " + coffee.getCost() + "; Ingredients: " + coffee.getIngredients() );
 
-    coffee = new Milk( coffee );
+    coffee = new MilkDecorator( coffee );
     System.out.println( "Cost: " + coffee.getCost() + "; Ingredients: " + coffee.getIngredients() );
 
-    coffee = new Whip( coffee );
+    coffee = new WhipDecorator( coffee );
     System.out.println( "Cost: " + coffee.getCost() + "; Ingredients: " + coffee.getIngredients() );
 
     // Note that you can also stack more than one decorator of the same type
-    coffee = new Sprinkles( coffee );
+    coffee = new SprinklesDecorator( coffee );
     System.out.println( "Cost: " + coffee.getCost() + "; Ingredients: " + coffee.getIngredients() );
   }
 
